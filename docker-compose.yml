@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server
+    restart: always
+    environment:
+      SA_PASSWORD: FridayPass1234
+      ACCEPT_EULA: "Y" # Add Persistence
+    ports:
+      - 1433:1433

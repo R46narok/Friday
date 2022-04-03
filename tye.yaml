@@ -1,0 +1,29 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+name: friday
+services:
+- name: friday-gateways-portal
+  project: src/Gateways/Friday.Gateways.Portal/Friday.Gateways.Portal.csproj
+  bindings:
+    - port: 8000
+      
+- name: friday-services-authorization
+  project: src/Services/Friday.Services.Authorization/Friday.Services.Authorization.csproj
+  bindings:
+    - port: 8001
+      
+- name: friday-services-authorization-db
+  image: mcr.microsoft.com/mssql/server
+  bindings:
+    - port: 1433
+      containerPort: 1433
+  env:
+    - name: SA_PASSWORD
+      value: FridayPass1234
+    - name: ACCEPT_EULA
+      value: Y
+  
