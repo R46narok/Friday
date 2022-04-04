@@ -1,5 +1,6 @@
 using Friday.Application;
 using Friday.Services.Authorization.Entities;
+using Friday.Services.Authorization.Identity;
 using Friday.Services.Authorization.Persistence;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplication(typeof(Program).Assembly);
+builder.Services.AddTransient<IIdentityService, IdentityService>();
 
 builder.Services.AddDbContext<AuthorizationDbContext>(options =>
     {
