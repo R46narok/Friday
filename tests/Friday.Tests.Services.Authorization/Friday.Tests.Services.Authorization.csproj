@@ -23,7 +23,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\Services\Friday.Services.Authorization\Friday.Services.Authorization.Api\Friday.Services.Authorization.Api.csproj" />
       <ProjectReference Include="..\..\src\Services\Friday.Services.Authorization\Friday.Services.Authorization.csproj" />
+      <ProjectReference Include="..\..\src\Services\Friday.Services.Authorization\Friday.Services.Authorization\Friday.Services.Authorization.csproj" />
     </ItemGroup>
 
 </Project>

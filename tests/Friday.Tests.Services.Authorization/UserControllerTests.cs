@@ -7,13 +7,12 @@ using Friday.Services.Authorization.Commands.User.CreateApplicationUser;
 using Friday.Services.Authorization.Controllers;
 using Friday.Services.Authorization.DTOs;
 using Friday.Services.Authorization.Entities;
-using Friday.Services.Authorization.Identity;
-using Friday.Services.Authorization.Profiles;
+using Friday.Services.Authorization.MappingProfiles;
+using Friday.Services.Authorization.Services;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using NSubstitute.ReceivedExtensions;
 using Xunit;
 
 namespace Friday.Tests.Services.Authorization;

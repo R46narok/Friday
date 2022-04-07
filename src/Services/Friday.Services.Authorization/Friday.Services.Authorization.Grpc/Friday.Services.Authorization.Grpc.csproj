@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Protobuf Include="Protos\user.proto" GrpcServices="Server" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Common\Friday.Application\Friday.Application.csproj" />
+      <ProjectReference Include="..\Friday.Services.Authorization\Friday.Services.Authorization.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Persistence" />
+    </ItemGroup>
+
+</Project>

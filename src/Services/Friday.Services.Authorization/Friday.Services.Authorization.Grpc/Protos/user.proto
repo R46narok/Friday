@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Friday.Services.Authorization.Grpc";
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message GetUserResponse {
+  string userName = 1;
+  string email = 2;
+  string phoneNumber = 3;
+}
+
+service User {
+  rpc GetUserById(GetUserRequest) returns (GetUserResponse);
+}

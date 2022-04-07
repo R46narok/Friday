@@ -9,12 +9,12 @@ services:
 - name: friday-gateways-portal
   project: src/Gateways/Friday.Gateways.Portal/Friday.Gateways.Portal.csproj
   bindings:
-    - port: 8000
+    - port: 8001
       
 - name: friday-services-authorization
   project: src/Services/Friday.Services.Authorization/Friday.Services.Authorization.csproj
   bindings:
-    - port: 8001
+    - port: 8002
       
 - name: friday-services-authorization-db
   image: mcr.microsoft.com/mssql/server
